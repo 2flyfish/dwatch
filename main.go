@@ -15,7 +15,7 @@ import (
 
 func main() {
 
-	port := flag.Int("p", 3457, "server port")
+	port := flag.Int("p", 3357, "server port")
 	isStop := flag.Int("s", 0, "stop watch")
 	flag.Parse()
 
@@ -34,6 +34,6 @@ func main() {
 	// addr := ":" + strconv.Itoa(*port)
 	schedule.WatchAll(*isStop)
 	fmt.Printf("http server start at port:"+addr, "stop watch:", isStop)
-	c.Run(addr) // 监听并在 0.0.0.0:8080 上启动服务
+	c.Run(addr) // 监听并在 0.0.0.0:3357上启动服务
 
 }
